@@ -49,3 +49,21 @@ def safety_guard_loop(self):
     while True:
         self._check_physical_collisions()
         time.sleep(0.05)
+{
+  "headerId": 101,
+  "nodes": [{"nodeId": "n1", "released": true}, ...],
+  "edges": [{"edgeId": "e1", "released": true}, ...]
+}
+
+
+
+├── VDA5050-Fleet-Manager/
+│   ├── src/
+│   │   ├── fleet_management/   # Central control logic
+│   │   │   ├── fleet_management.py
+│   │   │   └── task_assignment.py
+│   │   └── motion_control/     # Robot-side execution
+│   │       └── src/motion_control/
+│   │           ├── task_1.py
+│   │           └── task_2_3.py
+└── README.md
