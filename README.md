@@ -21,7 +21,7 @@ The project is organized into three modules located in the `src/` directory.
 
 ### 1. Fleet Server (The "Brain") 🧠
 Centralized logic for managing multiple robots.
-* **[📄 fleet_management.py](src/fleet_management/fleet_management.py))**
+* **[📄 fleet_management.py](src/fleet_management/fleet_management.py)**
     * **Traffic Manager:** Implements a reservation-based locking mechanism to prevent deadlocks.
     * **Safety Logic:** Features **Safety Tail Time** (`SAFETY_TAIL_TIME = 2.0s`) to prevent rear-end collisions.
 * **[📄 task_assignment.py](src/fleet_management/task_assignment.py)**
