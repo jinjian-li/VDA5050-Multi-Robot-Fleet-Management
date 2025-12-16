@@ -1,0 +1,112 @@
+{
+    "headerId": 1,
+    "timestamp": "2024-11-29T14:49:32.4926Z",
+    "version": "V2.1.0",
+    "manufacturer": "IFL",
+    "serialNumber": "IFL_1",
+    "orderId": "1",
+    "orderUpdateId": 0,
+    "nodes": [
+        {
+            "nodeId": "N3",
+            "sequenceId": 1,
+            "released": true,
+            "nodePosition": {
+                "x": 1.875,
+                "y": 1.875,
+                "mapId": "Map_1"
+            },
+            "actions": []
+        },
+        {
+            "nodeId": "N1",
+            "sequenceId": 3,
+            "released": true,
+            "nodePosition": {
+                "x": 0.625,
+                "y": 1.875,
+                "mapId": "Map_1"
+            },
+            "actions": [
+                {
+                    "actionType": "pick",
+                    "actionId": "pick-action-001",
+                    "blockingType": "HARD"
+                }
+            ]
+        },
+        {
+            "nodeId": "N3",
+            "sequenceId": 5,
+            "released": true,
+            "nodePosition": {
+                "x": 1.875,
+                "y": 1.875,
+                "mapId": "Map_1"
+            },
+            "actions": []
+        },
+        {
+            "nodeId": "N4",
+            "sequenceId": 7,
+            "released": true,
+            "nodePosition": {
+                "x": 1.875,
+                "y": 3.125,
+                "mapId": "Map_1"
+            },
+            "actions": []
+        },
+        {
+            "nodeId": "N2",
+            "sequenceId": 9,
+            "released": true,
+            "nodePosition": {
+                "x": 0.625,
+                "y": 3.125,
+                "mapId": "Map_1"
+            },
+            "actions": [
+                {
+                    "actionType": "drop",
+                    "actionId": "drop-action-001",
+                    "blockingType": "HARD"
+                }
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "edgeId": "E1_reverse",
+            "sequenceId": 2,
+            "released": true,
+            "startNodeId": "N3",
+            "endNodeId": "N1",
+            "actions": []
+        },
+        {
+            "edgeId": "E1",
+            "sequenceId": 4,
+            "released": true,
+            "startNodeId": "N1",
+            "endNodeId": "N3",
+            "actions": []
+        },
+        {
+            "edgeId": "E3",
+            "sequenceId": 6,
+            "released": true,
+            "startNodeId": "N3",
+            "endNodeId": "N4",
+            "actions": []
+        },
+        {
+            "edgeId": "E2_reverse",
+            "sequenceId": 8,
+            "released": true,
+            "startNodeId": "N4",
+            "endNodeId": "N2",
+            "actions": []
+        }
+    ]
+}

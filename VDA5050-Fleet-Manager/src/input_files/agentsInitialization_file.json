@@ -1,0 +1,33 @@
+{
+    "mapId": "Map_1",
+    "agents": [
+        {
+            "agentId": "1",
+            "stateTopic": "uagv/v2/KIT/1/state",         
+            "orderTopic": "uagv/v2/KIT/1/order",         
+            "visualizationTopic": "uagv/v2/KIT/1/visualization", 
+            "agentPosition": {
+                "x": -1.41,
+                "y": -0.87,
+                "theta": 0.0,
+                "mapId": "Map_1"
+            },
+            "agentVelocity": 1,
+            "agentRotationVelocity": 3.0
+        },
+        {
+            "agentId": "2",
+            "stateTopic": "uagv/v2/KIT/2/state",
+            "orderTopic": "uagv/v2/KIT/2/order",
+            "visualizationTopic": "uagv/v2/KIT/2/visualization",
+            "agentPosition": {
+                "x": -3.00,
+                "y": 2.09,
+                "theta": 0.0,
+                "mapId": "Map_1"
+            },
+            "agentVelocity": 1,
+            "agentRotationVelocity": 3.0
+        }
+    ]
+}

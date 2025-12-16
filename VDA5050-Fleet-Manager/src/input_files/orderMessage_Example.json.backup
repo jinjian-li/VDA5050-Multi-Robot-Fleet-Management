@@ -1,0 +1,131 @@
+{
+    "headerId": 1,
+    "timestamp": "2024-11-29T14:49:32.4926Z",
+    "version": "V2.1.0",
+    "manufacturer": "IFL",
+    "serialNumber": "IFL_1",
+    "orderId": "1",
+    "orderUpdateId": 0,
+    "nodes": [
+        {
+            "nodeId": "N1",
+            "sequenceId": 1,
+            "released": true,
+            "nodePosition": {
+                "x": 1,
+                "y": 2,
+                "mapId": "Map_1"
+            },
+            "actions": [
+                {
+                    "actionType": "pick",
+                    "actionId": "3b9fc68a-c460-4dbb-a043-43b2dbee0a82",
+                    "blockingType": "HARD"
+                }
+            ]
+        },
+        {
+            "nodeId": "N3",
+            "sequenceId": 3,
+            "released": true,
+            "nodePosition": {
+                "x": 2,
+                "y": 2,
+                "mapId": "Map_1"
+            },
+            "actions": []
+        },
+        {
+            "nodeId": "N4",
+            "sequenceId": 5,
+            "released": true,
+            "nodePosition": {
+                "x": 6,
+                "y": 2,
+                "mapId": "Map_1"
+            },
+            "actions": []
+        },
+        {
+            "nodeId": "N6",
+            "sequenceId": 7,
+            "released": true,
+            "nodePosition": {
+                "x": 5,
+                "y": 6,
+                "mapId": "Map_1"
+            },
+            "actions": []
+        },
+        {
+            "nodeId": "N8",
+            "sequenceId": 9,
+            "released": true,
+            "nodePosition": {
+                "x": 6,
+                "y": 6,
+                "mapId": "Map_1"
+            },
+            "actions": [
+                {
+                    "actionType": "drop",
+                    "actionId": "5v3fc68a-c460-4dbb-a043-43b2dbee0b45",
+                    "blockingType": "HARD"
+                }
+            ]
+        },
+        {
+            "nodeId": "N6",
+            "sequenceId": 11,
+            "released": true,
+            "nodePosition": {
+                "x": 5,
+                "y": 6,
+                "mapId": "Map_1"
+            },
+            "actions": []
+        }
+    ],
+    "edges": [
+        {
+            "edgeId": "E1",
+            "sequenceId": 2,
+            "released": true,
+            "startNodeId": "N1",
+            "endNodeId": "N3",
+            "actions": []
+        },
+        {
+            "edgeId": "E3",
+            "sequenceId": 4,
+            "released": true,
+            "startNodeId": "N3",
+            "endNodeId": "N4",
+            "actions": []
+        },
+        {
+            "edgeId": "E5",
+            "sequenceId": 6,
+            "released": true,
+            "startNodeId": "N4",
+            "endNodeId": "N6",
+            "actions": []
+        },
+        {
+            "edgeId": "E8",
+            "sequenceId": 8,
+            "released": true,
+            "startNodeId": "N6",
+            "endNodeId": "N8",
+            "actions": []
+        },
+        {
+            "edgeId": "E8",
+            "sequenceId": 10,
+            "released": true,
+            "startNodeId": "N8",
+            "endNodeId": "N6",
+            "actions": []
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "pygame_scaling_factor": 120,
+    "_comment1": "Scaling factor of the pygame visualisation.",
+
+    "mqtt_broker_ip": "localhost",
+    "_comment2": "IP address of the MQTT broker.",
+
+    "mqtt_broker_port": 1883,
+    "_comment3": "Port of the MQTT broker.",
+
+    "pygame_fps": 30,
+    "_comment4": "Frame rate of the visualisation.",
+
+    "agent_rotation_diameter": 1,
+    "_comment5": "Diameter of the circle the agent requires to rotate around its kinematic center point in meters. The agents can turn on the spot.",
+
+    "fleet_management_mode": "SIMULATED_AGENTS",
+    "_comment6": "SIMULATED_AGENTS or REAL_AGENTS. Mode of the fleet management. When 'SIMULATED_AGENTS' is set, the simulated agents are publishing state messages to the MQTT broker. When 'REAL_AGENTS' is set, the simulated agents are not publishing state messages to the MQTT broker. This mode should be used when real mobile robots are controlled by the fleet manager and the simulation is run in parallel. The simulated agents are then only used for visualisation purposes.",
+
+    "simulation_run_time": 1000000,
+    "_comment7": "Simulation run time in seconds. Value can be set high for 'infinite' simulation."
+}
