@@ -21,18 +21,18 @@ The project is organized into modular components. Click the file names below to 
 
 ### 1. Fleet Server (The "Brain") 🧠
 Centralized logic for managing multiple robots.
-* **[📄 fleet_management.py](src/fleet_management/fleet_management.py)**
+* **[📄 fleet_management.py](VDA5050-Fleet-Manager/src/fleet_management/fleet_management.py)**
     * **Traffic Manager:** Implements a reservation-based locking mechanism to prevent deadlocks.
     * **Safety Logic:** Features **Safety Tail Time** (`SAFETY_TAIL_TIME = 2.0s`) to prevent rear-end collisions.
-* **[📄 task_assignment.py](src/fleet_management/task_assignment.py)**
+* **[📄 task_assignment.py](VDA5050-Fleet-Manager/src/fleet_management/task_assignment.py)**
     * **Task Dispatcher:** Assigns orders to the most suitable idle agent based on heuristics.
     * **Safety Guard:** Runs a background thread (`safety_guard_loop`) to monitor physical proximity and trigger E-Stops.
 
 ### 2. Robot Agent (The "Edge") 🚜
 Client-side logic running on the AGV.
-* **[📄 task_1.py (VDA Parser)](src/motion_control/src/motion_control/task_1.py)**
+* **[📄 task_1.py (VDA Parser)](VDA5050-Fleet-Manager/src/motion_control/src/motion_control/task_1.py)**
     * **Protocol Parsing:** Decodes JSON payloads (`Order`, `Nodes`, `Edges`) into actionable waypoints.
-* **[📄 task_2_3.py (Local Controller)](src/motion_control/src/motion_control/task_2_3.py)**
+* **[📄 task_2_3.py (Local Controller)](VDA5050-Fleet-Manager/src/motion_control/src/motion_control/task_2_3.py)**
     * **Motion Control:** Executes trajectory following.
     * **State Reporting:** Publishes `Position` and `State` updates back to the server via MQTT.
 
