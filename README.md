@@ -17,7 +17,7 @@ The system is designed to comply with the **VDA 5050 Standard** (Interface for c
 
 ## 🏗️ System Architecture & Code Map
 
-The project is organized into three modules located in the `src/` directory.
+The project is organized into modular components. Click the file names below to view the source code.
 
 ### 1. Fleet Server (The "Brain") 🧠
 Centralized logic for managing multiple robots.
@@ -25,21 +25,16 @@ Centralized logic for managing multiple robots.
     * **Traffic Manager:** Implements a reservation-based locking mechanism to prevent deadlocks.
     * **Safety Logic:** Features **Safety Tail Time** (`SAFETY_TAIL_TIME = 2.0s`) to prevent rear-end collisions.
 * **[📄 task_assignment.py](src/fleet_management/task_assignment.py)**
-    * **Task Dispatcher:** Assigns orders to the most suitable idle agent.
+    * **Task Dispatcher:** Assigns orders to the most suitable idle agent based on heuristics.
     * **Safety Guard:** Runs a background thread (`safety_guard_loop`) to monitor physical proximity and trigger E-Stops.
 
 ### 2. Robot Agent (The "Edge") 🚜
 Client-side logic running on the AGV.
-* **[📄 task_1.py](/src/motion_control/task_1.py)** *(VDA Parser)*
+* **[📄 task_1.py (VDA Parser)](src/motion_control/src/motion_control/task_1.py)**
     * **Protocol Parsing:** Decodes JSON payloads (`Order`, `Nodes`, `Edges`) into actionable waypoints.
-* **[📄 task_2_3.py](/src/motion_control/task_2_3.py)** *(Local Controller)*
+* **[📄 task_2_3.py (Local Controller)](src/motion_control/src/motion_control/task_2_3.py)**
     * **Motion Control:** Executes trajectory following.
     * **State Reporting:** Publishes `Position` and `State` updates back to the server via MQTT.
-
-### 3. Shared Data Structures ⚙️
-Common definitions used by both server and agents.
-* **[📄 graph.py](src/src/input_files/graph.py)**: Topological map definitions.
-* **[📄 agent.py](src/src/input_files/agent.py)**: Robot state machine classes.
 
 ---
 
